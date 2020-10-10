@@ -1,8 +1,6 @@
 package by.yakovitski.mytasks.lesson6.collection;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class DigitalArr {
     public static void main(String[] args) {
@@ -13,12 +11,10 @@ public class DigitalArr {
             digitalList.add(random.nextInt(10));
         }
         System.out.println(digitalList);
-
+        Collections.sort(digitalList);
         for (int i = 0; i < digitalList.size(); i++) {
-            for (int j = i + 1; j < digitalList.size(); j++) {
-                if (digitalList.get(i) == digitalList.get(j)){
-                    digitalList.remove(i);
-                }
+            if (digitalList.get(i) == digitalList.get(i + 1)) {
+                digitalList.remove(digitalList.get(i));
             }
         }
         System.out.println(digitalList);
