@@ -12,9 +12,10 @@ public class DigitalArr {
         }
         System.out.println(digitalList);
         Collections.sort(digitalList);
-        for (int i = 0; i < digitalList.size(); i++) {
+        for (int i = 0; i < digitalList.size() - 1; i++) {
             if (digitalList.get(i) == digitalList.get(i + 1)) {
-                digitalList.remove(digitalList.get(i));
+                digitalList.remove(digitalList.get(i + 1));
+                i--;
             }
         }
         System.out.println(digitalList);
