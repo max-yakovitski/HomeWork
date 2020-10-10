@@ -19,7 +19,7 @@ public class Text {
     public void makeFrequencyDictionary() {
         String[] strings = this.getText().toLowerCase().split("[,;!?]\\s");
 
-        TreeMap<String, Integer> wordList = new TreeMap();
+        Map<String, Integer> wordList = new TreeMap();
         for (int i = 0; i < strings.length; i++) {
             wordList.compute(strings[i], (String, Integer)
                     -> Integer == null ? 1 : Integer + 1);
