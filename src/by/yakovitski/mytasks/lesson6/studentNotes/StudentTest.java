@@ -14,23 +14,7 @@ public class StudentTest {
         list.add(new Student(random.nextInt(10)));
         list.add(new Student(random.nextInt(10)));
 
-        printList(list);
-        searchTheHighestNote(list);
-    }
-
-    public static void printList(List<Student>list){
-        for (Student student : list) {
-            System.out.println(student);
-        }
-    }
-
-    public static void searchTheHighestNote(List<Student>list) {
-        int maxNote = 0;
-        for (int i = 0; i < list.size(); i++) {
-            if (maxNote < list.get(i).getNote()){
-                maxNote = list.get(i).getNote();
-            }
-        }
-        System.out.println("Самая высокая оценка: " + maxNote);
+        Student.printList(list);
+        System.out.println("Самая высокая: " + Student.searchTheHighestNote(list));
     }
 }
