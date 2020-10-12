@@ -6,22 +6,22 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Poem {
-    private List<String> stringlines;
+    private List<String> lines;
 
     public Poem() {
-        stringlines = new ArrayList<>();
+        lines = new ArrayList<>();
     }
 
     public List<String> getLines() {
-        return stringlines;
+        return lines;
     }
 
     public void setLines(List<String> lines) {
-        this.stringlines = lines;
+        this.lines = lines;
     }
 
     public void addText(String string) {
-        stringlines.add(string);
+        lines.add(string);
     }
 
     public  void  sortLine () {
@@ -34,7 +34,7 @@ public class Poem {
     }
 
     public void print(){
-        for (String str: stringlines) {
+        for (String str: lines) {
             System.out.println(str);
         }
     }
