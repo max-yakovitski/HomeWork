@@ -2,12 +2,22 @@ package by.yakovitski.mytasks.lesson6.mobile;
 
 //для возможного использования
 
+import java.util.Objects;
+
 public class Abonent {
     private  int id;
     private String name;
     private String surname;
     private int age;
-    private boolean sex;
+    private Sex sex;
+
+    public Abonent(int id, String name, String surname, int age, Sex sex) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.sex = sex;
+    }
 
     public int getId() {
         return id;
@@ -41,20 +51,28 @@ public class Abonent {
         this.age = age;
     }
 
-    public boolean isSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
-    public Abonent(int id, String name, String surname, int age, boolean sex) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.sex = sex;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Abonent)) return false;
+        Abonent abonent = (Abonent) o;
+        return id == abonent.id &&
+                age == abonent.age &&
+                Objects.equals(name, abonent.name) &&
+                Objects.equals(surname, abonent.surname) &&
+                sex == abonent.sex;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, surname, age, sex);
+    }
 }

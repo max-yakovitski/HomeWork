@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface OperatorTools {
 
-    public void addAbonent (MobileTariff mobileTariff);
-    public void removeAbonent (MobileTariff mobileTariff);
-    public int getAllAbonentQuantity (List<MobileTariff> list);
-    public void sortTariffPrice (List<MobileTariff> list);
-    public void  findTariff (List<MobileTariff> list, String name);
+    void addAbonent (MobileTariff mobileTariff);
+    void removeAbonent (MobileTariff mobileTariff);
+    int getAllAbonentQuantity (List<MobileTariff> list);
+    void sortTariffPrice (List<MobileTariff> list);
+    String  findTariff (List<MobileTariff> list, String name);
 
 }

@@ -1,7 +1,6 @@
 package by.yakovitski.mytasks.lesson6.mobile.tariffs;
 
 public abstract class MobileTariff {
-
     private String tariffName;
     private  double tariffPrice;
     private int usersQuantity;
