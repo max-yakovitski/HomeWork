@@ -3,6 +3,8 @@ package by.yakovitski.mytasks.lesson6.vacation.types;
 import by.yakovitski.mytasks.lesson6.vacation.enums.FoodOption;
 import by.yakovitski.mytasks.lesson6.vacation.enums.TypeOfTransport;
 
+import java.util.Arrays;
+
 public abstract class Recreation {
     private String name;
     private int duration;
@@ -77,4 +79,9 @@ public abstract class Recreation {
                 ", тип транспорта = " + typeOfTransport.getTypeOfTransport() +
                 ", питание = " + foodOption.getFoodOption();
     }
+
+    public void selectAdditionalOptions (String string) {
+        System.out.println(string);
+    }
+
 }
