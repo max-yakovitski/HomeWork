@@ -27,13 +27,4 @@ public class Talon {
         return "Талон № " + id +
                 ", дата: " + dateFormat.format(date);
     }
-
-    public static void main(String[] args) {
-        Talon talon = new Talon();
-        System.out.println(talon);
-        Talon talon1 = new Talon();
-        System.out.println(talon1);
-        Talon talon2 = new Talon();
-        System.out.println(talon2);
-    }
 }

@@ -3,7 +3,7 @@ package by.yakovitski.mytasks.lesson7.talon;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Doctor {
+public class Doctor extends Entity {
     private String doctorsName;
     private String occupation;
     private int doctorId;
@@ -16,7 +16,7 @@ public class Doctor {
         this.doctorId = doctorId;
     }
 
-    public String getDoctorsName() {
+    public String getName() {
         return doctorsName;
     }
 
@@ -54,5 +54,10 @@ public class Doctor {
 
     public void deleteTalon (Talon talon) {
         talons.remove(talon);
+    }
+
+    @Override
+    public String toString() {
+        return occupation;
     }
 }

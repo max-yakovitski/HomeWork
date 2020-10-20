@@ -3,7 +3,7 @@ package by.yakovitski.mytasks.lesson7.talon;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hospital {
+public class Hospital extends Entity {
     private  String name;
     private int hospitalId;
     private List<Doctor> doctors;
@@ -44,5 +44,10 @@ public class Hospital {
 
     public void deleteDoctor (Doctor doctor) {
         doctors.remove(doctor);
+    }
+
+    @Override
+    public String toString() {
+        return name + " № " + hospitalId;
     }
 }
