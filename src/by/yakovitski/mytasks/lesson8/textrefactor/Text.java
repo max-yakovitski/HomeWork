@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Text {
     public static void main(String[] args) throws IOException {
-    File file = new File("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/textreader/TestText");
+    File file = new File("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/textrefactor/TestText");
     rewriteFile(file);
     }
 
@@ -30,7 +30,7 @@ public class Text {
     public static void rewriteFile (File file) throws IOException {
         String text = correctText(readText(file));
         file.delete();
-        FileWriter fileWriter = new FileWriter("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/textreader/" + "TextForWork");
+        FileWriter fileWriter = new FileWriter("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/textrefactor/" + "TextForWork");
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         bufferedWriter.write(text);
         bufferedWriter.close();
