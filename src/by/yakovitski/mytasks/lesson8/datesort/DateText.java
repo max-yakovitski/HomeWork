@@ -2,7 +2,7 @@ package by.yakovitski.mytasks.lesson8.datesort;
 
 import java.io.*;
 
-public class Text {
+public class DateText {
     public static void main(String[] args) throws IOException {
         File file = new File("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/datesort/People");
         makeDir(file);
