@@ -14,15 +14,15 @@ public class DateText {
         while((line = reader.readLine()) != null) {
             String [] text = line.split(" - ");
             File fileDir = new File("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/datesort", text[0]);
+            File fileInfo = new File(fileDir, "info.txt");
             if (!fileDir.exists()){
-                File fileInfo = new File("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/datesort/" + text[0], "info.txt");
                 fileDir.mkdir();
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileInfo));
                 writer.write(text[1]);
                 writer.close();
             }
             else {
-                FileWriter fileWriter = new FileWriter("/Users/ma_yak/HomeWork/src/by/yakovitski/mytasks/lesson8/datesort/" + text[0] + "/info.txt", true);
+                FileWriter fileWriter = new FileWriter(fileInfo, true);
                 BufferedWriter writer1 = new BufferedWriter(fileWriter);
                 writer1.write("\n" + text[1]);
                 writer1.close();
